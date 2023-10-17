@@ -16,9 +16,16 @@ export default defineNuxtConfig({
     },
   },
 
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon'
+
+  ],
+
   plugins: [
     "@/plugins/vRipple.js"
   ],
+
   css: [
     "@/assets/css/tailwind.css",
     "@/assets/fonts/Montserrat.css",
