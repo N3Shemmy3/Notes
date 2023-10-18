@@ -1,10 +1,10 @@
 <template>
 	<div
 		id="Toolbar"
-		:class="{ 'border-b border-b-colorOutlineLight dark:border-colorOutlineDark': isScrolled, }"
-		class="fixed top-0 z-50 h-[56px] w-full bg-colorSurfaceLight dark:bg-colorSurfaceDark  text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+		:class="{ 'border-b-[0.5px] dark:border-opacity-20 border-colorOutlineDark shadow-sm': isScrolled, }"
+		class="fixed top-0 z-50 h-[56px] border-t-0 w-full bg-colorSurfaceLight dark:bg-colorSurfaceDark  text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 	>
-		<div class="max-w-screen-xl m-auto flex px-4 py-2 space-x-4 items-center">
+		<div class="max-w-screen-xl m-auto flex px-2 py-2 space-x-4 items-center">
 			<NuxtLink
 				class="flex"
 				to="/"
