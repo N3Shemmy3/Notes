@@ -11,7 +11,7 @@
 			>
 				<div
 					class="flex noSelect justify-center content-center hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark">
-					<h4 class="text-xl font-bold">Notes</h4>
+					<h4 class="text-xl font-bold px-[8px]">Notes</h4>
 				</div>
 			</NuxtLink>
 			<div class="flex-grow" />
