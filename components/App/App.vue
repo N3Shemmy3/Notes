@@ -1,5 +1,6 @@
 <template>
     <div class="
+            w-full min-h-screen select-none
           bg-colorBackgroundLight
           dark:bg-colorBackgroundDark
           text-colorOnBackgroundLight
