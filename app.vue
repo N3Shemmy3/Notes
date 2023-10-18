@@ -1,10 +1,5 @@
 <template>
-  <div class="
-          bg-colorBackgroundLight
-          dark:bg-colorBackgroundDark
-          text-colorOnBackgroundLight
-          dark:text-colorOnBackgroundDark
-      ">
+  <App>
     <NuxtWelcome />
-  </div>
+  </App>
 </template>
