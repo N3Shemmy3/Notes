@@ -1,14 +1,16 @@
 <template>
-    <div class="mx-auto grid gap-3 grid-responsive ">
+    <div class="mx-auto flex flex-col grid-responsive ">
         <div
             v-Ripple
             v-for="n in 100"
             id="card"
             class="
-            px-4
+            px-4 py-2
             w-full 
             break-words 
-            flex flex-col 
+            flex flex-col
+            border-colorOutlineLight 
+            dark:border-colorOutlineDark
             rounded-md 
             shadow-sm"
         >

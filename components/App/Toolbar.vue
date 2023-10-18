@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="Toolbar"
-		:class="{ 'border-b-colorOutlineLight dark:border-colorOutlineDark': isScrolled, }"
+		:class="{ 'border-b border-b-colorOutlineLight dark:border-colorOutlineDark': isScrolled, }"
 		class="fixed top-0 z-50 h-[56px] w-full bg-colorSurfaceLight dark:bg-colorSurfaceDark  text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 	>
 		<div class="max-w-screen-xl m-auto flex px-4 py-2 space-x-4 items-center">
