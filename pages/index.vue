@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto grid gap-3 grid-responsive py-4">
+    <div class="mx-auto grid gap-3 grid-responsive ">
         <div
             v-Ripple
             v-for="n in 100"

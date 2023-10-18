@@ -2,14 +2,12 @@
 @tailwind components;
 
 
-html,
 body {
 	@apply bg-colorBackgroundLight text-colorOnBackgroundLight;
 	margin: 0;
 	position: absolute;
 	height: 100%;
-	width: 100vw;
-	overflow-x: hidden;
+	width: 100%;
 	font-family: "Montserrat", sans-serif;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -21,7 +19,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
+	width: 8px;
 	@apply bg-colorPrimaryLight bg-opacity-10;
 }
 

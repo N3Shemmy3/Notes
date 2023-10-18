@@ -1,6 +1,8 @@
 <template>
   <App>
     <Toolbar />
-    <NuxtPage />
+    <Container>
+      <NuxtPage />
+    </Container>
   </App>
 </template>
