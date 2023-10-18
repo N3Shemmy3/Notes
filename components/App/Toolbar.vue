@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="Toolbar"
-		class="fixed top-0 z-50 h-14 w-full backdrop-filter bg-opacity-30 border-b dark:border-zinc-800 border-gray-50 firefox:bg-opacity-90 backdrop-blur-lg text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+		class="fixed top-0 z-50 h-[56px] w-full mr-[4px] backdrop-filter bg-opacity-30 border-b dark:border-zinc-800 border-gray-50 firefox:bg-opacity-90 backdrop-blur-lg text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 	>
 		<div class="max-w-screen-xl m-auto flex px-4 py-2 space-x-4 items-center">
 			<NuxtLink
@@ -10,24 +10,20 @@
 			>
 				<div
 					class="flex noSelect justify-center content-center hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark">
-					<Icon
-						class="sm:inline hidden me-1"
-						name="ph:terminal-window"
-						size="28px"
-					/>
-					<h4 class="text-lg"> N3Shemmy3</h4>
+
+					<h4 class="text-xl font-bold">Notes</h4>
 				</div>
 			</NuxtLink>
 			<div class="flex-grow" />
 			<div class="flex space-x-1">
 				<div
+					v-Ripple
 					v-for="menu in menuItems"
 					v-bind:key="menu.icon"
-					@click="onMenuItemCliked(menu)"
-					class="flex cursor-pointer noSelect jsutify-center h-12 w-12 rounded-full hover:bg-colorPrimaryContainerLight dark:hover:bg-colorPrimaryContainerDark"
+					class="flex cursor-pointer noSelect jsutify-center p-[8px] rounded-full"
 				>
 					<Icon
-						class="m-auto"
+						class="m-auto pointer-events-none"
 						:name="menu.icon"
 						size="24px"
 					/>
@@ -45,24 +41,10 @@ interface Menu {
 }
 const menuItems = ref([
 	{
-		title: "GitHub",
-		icon: "ph:github-logo",
-		url: "https://github.com/N3Shemmy3",
+		title: "menu",
+		icon: "mdi:dots-vertical",
+		url: "",
 	},
-	{
-		title: "Linked-In",
-		icon: "ph:linkedin-logo",
-		url: "https://zm.linkedin.com/in/shemmy-nyirenda-7a3681259",
-	},
-	/*
-	 
-	{
-		title: "Telegram",
-		icon: "ph:telegram-logo",
-		url: "https://t.me/n3shemmy3",
-	},
-	*/
-	{ title: "Email", icon: "ph:envelope", url: "n3Shemmy3@gmail.com" },
 ]);
 function contactViaEmail(menu: Menu) {
 	return menu.title != "Email"

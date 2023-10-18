@@ -1,6 +1,8 @@
 <template>
     <div class="
-            w-full min-h-screen select-none
+            flex pt-14 mr-1
+            w-full min-h-screen 
+            select-none
           bg-colorBackgroundLight
           dark:bg-colorBackgroundDark
           text-colorOnBackgroundLight
