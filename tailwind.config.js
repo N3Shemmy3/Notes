@@ -74,7 +74,7 @@ module.exports = {
 				colorOnSurfaceDark: "#e9e1d9",
 				colorSurfaceVariantDark: "#4d4639",
 				colorOnSurfaceVariantDark: "#d1c5b4",
-				colorOutlineDark: "#33847965",
+				colorOutlineDark: "#847965",
 				colorInverseOnSurfaceDark: "#1e1b16",
 				colorInverseSurfaceDark: "#e9e1d9",
 				colorInversePrimaryDark: "#7a5900",
