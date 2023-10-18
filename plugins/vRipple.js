@@ -1,8 +1,8 @@
 const handleRipple = (element, binding, ev) => {
 	const rippleElement = document.createElement("span");
 	let currentDiameter = 1;
-	let currentOpacity = 0.65;
-	let animationHandler = setInterval(animateRippleSpread, 6);
+	let currentOpacity = .5;
+	let animationHandler = setInterval(animateRippleSpread, 8);
 	applyRippleStyle();
 
 	function applyRippleStyle() {
@@ -14,7 +14,7 @@ const handleRipple = (element, binding, ev) => {
 		rippleElement.style.height = "5px";
 		rippleElement.style.width = "5px";
 		rippleElement.style.borderRadius = "100%";
-		rippleElement.style.backgroundColor = "#FF7373";
+		rippleElement.style.backgroundColor = "#d8c39e";
 		rippleElement.style.left = `${offsetX}px`;
 		rippleElement.style.top = `${offsetY}px`;
 		ev.target.appendChild(rippleElement);
