@@ -6,6 +6,7 @@ interface Modal {
 }
 type Events = {
 	"modal:event": Modal;
+	"event:isToolbarLifted": boolean;
 	"event:mouseover": boolean;
 	"onDrawerVisCh": boolean;
 };

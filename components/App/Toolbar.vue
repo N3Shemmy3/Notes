@@ -1,7 +1,8 @@
 <template>
 	<div
 		id="Toolbar"
-		class="fixed top-0 z-50 h-[56px] w-full mr-[4px] backdrop-filter bg-opacity-30 border-b dark:border-zinc-800 border-gray-50 firefox:bg-opacity-90 backdrop-blur-lg text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
+		:class="{ 'border-b-colorOutlineLight dark:border-colorOutlineDark': isScrolled, }"
+		class="fixed top-0 z-50 h-[56px] w-full bg-colorSurfaceLight dark:bg-colorSurfaceDark  text-colorOnSurfaceLight dark:text-colorOnSurfaceDark"
 	>
 		<div class="max-w-screen-xl m-auto flex px-4 py-2 space-x-4 items-center">
 			<NuxtLink
@@ -10,7 +11,6 @@
 			>
 				<div
 					class="flex noSelect justify-center content-center hover:text-colorPrimaryLight dark:hover:text-colorPrimaryDark">
-
 					<h4 class="text-xl font-bold">Notes</h4>
 				</div>
 			</NuxtLink>
@@ -39,6 +39,7 @@ interface Menu {
 	title: string;
 	url: string;
 }
+const isScrolled = ref()
 const menuItems = ref([
 	{
 		title: "menu",
@@ -62,6 +63,12 @@ function onMenuItemCliked(menu: Menu) {
 			break;
 	}
 }
+
+useListen('event:isToolbarLifted',
+	(isToolbarLifted) => {
+		isScrolled.value = isToolbarLifted
+		console.log(isScrolled.value)
+	})
 </script>
 
 <style scoped>
