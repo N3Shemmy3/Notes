@@ -1,6 +1,6 @@
 <template>
   <div class="
-  md:flex-col
+            md:flex-col
             flex mr-1
             w-full min-h-screen 
             select-none
