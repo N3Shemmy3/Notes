@@ -1,32 +1,37 @@
 <template>
-    <div class="">
-        <div class="py-8">
+    <div class="m-auto">
+        <div class="py-10">
 
             <h4 class="text-3xl font-bold cursor-pointer">Browse</h4>
         </div>
-        <div
-            v-Ripple
-            v-for="(n, i) in   3  "
-            id="card"
-            class="
+        <div class="w-full grid gap-4 grid-responsive">
+
+            <card
+                v-Ripple
+                v-for="(n, i) in 8"
+                id="card"
+                class="
             cursor-pointer
             px-4 py-4
-            w-full 
-            max-w-md
-            break-words 
+            h-fit
+            w-full
             flex flex-col
+            space-y-2
             border-[.5px]
             border-opacity-20
+            bg-colorSecondaryContainerDark
+            text-colorOnSecondaryContaineDark
+            rounded-lg
             border-colorOutlineLight"
-            :class="{ 'rounded-t-md ': i == 0, 'rounded-b-md': i >= 2 }"
-        >
-            <h6 class="text-l font-semibold">
-                Note Title
-            </h6>
-            <p class="line-clamp-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quod sed nemo pariatur doloribus non ipsa
-                cupiditate itaque harum odio, voluptas possimus iusto quas amet illum magni facere? Ut, fugiat.
-            </p>
+            >
+                <h6 class="text-sm font-semibold">
+                    Note Title
+                </h6>
+                <p class="text-sm line-clamp-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quod sed nemo pariatur doloribus non ipsa
+                    cupiditate itaque harum odio, voluptas possimus iusto quas amet illum magni facere? Ut, fugiat.
+                </p>
+            </card>
         </div>
     </div>
 </template>
@@ -34,6 +39,6 @@
 <style scoped>
 .grid-responsive {
     grid-area: span;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 </style>

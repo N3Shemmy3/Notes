@@ -1,7 +1,7 @@
 <template>
   <App>
-    <NavigationRail class="md:visible" />
-    <Toolbar class="md:hidden" />
+    <NavigationRail class="md:visible " />
+    <Toolbar class="md:hidden hidden" />
     <Container>
       <NuxtPage />
     </Container>
