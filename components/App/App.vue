@@ -1,6 +1,7 @@
 <template>
   <div class="
-            flex py-14 mr-1
+  md:flex-col
+            flex mr-1
             w-full min-h-screen 
             select-none
           bg-colorBackgroundLight

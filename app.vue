@@ -1,9 +1,11 @@
 <template>
   <App>
-    <Toolbar />
+    <NavigationRail class="md:visible" />
+    <Toolbar class="md:hidden" />
     <Container>
       <NuxtPage />
     </Container>
+
   </App>
 </template>
 <script setup>

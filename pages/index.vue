@@ -1,5 +1,9 @@
 <template>
-    <div class="mx-auto flex flex-col">
+    <div class="">
+        <div class="py-8">
+
+            <h4 class="text-3xl font-bold cursor-pointer">Browse</h4>
+        </div>
         <div
             v-Ripple
             v-for="(n, i) in   3  "
