@@ -11,7 +11,8 @@
                         m-auto
                         flex cursor-pointer
                         min-h-[48px] min-w-[48px] 
-                        bg-colorPrimaryLight 
+                        bg-colorPrimaryLight dark:bg-colorPrimaryDark
+                        text-colorOnPrimaryLight dark:text-colorOnPrimaryDark
                         rounded-full 
                         shadow-sm 
                         opacity-70 hover:opacity-100"
@@ -24,16 +25,15 @@
                 />
             </div>
         </div>
-        <div class="flex flex-col w-full py-[16px] space-y-4 absolute bottom-0">
+        <div class="flex flex-col w-full py-[16px] space-y-2 absolute bottom-0">
             <div
                 v-for="n in menuItems"
                 v-Ripple
                 class="
                         m-auto
                         flex cursor-pointer
-                        min-h-[32px] min-w-[32px]  
-                        rounded-full 
-                        shadow-sm 
+                        min-h-[48px] min-w-[48px]  
+                        rounded-full
                         "
             >
                 <Icon

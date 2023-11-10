@@ -19,8 +19,8 @@
             space-y-2
             border-[.5px]
             border-opacity-20
-            bg-colorSecondaryContainerDark
-            text-colorOnSecondaryContaineDark
+            bg-colorSecondaryContainerLight dark:bg-colorSecondaryContainerDark
+            text-colorOnSecondaryContainerLight dark:text-colorOnSecondaryLight
             rounded-lg
             border-colorOutlineLight"
             >
