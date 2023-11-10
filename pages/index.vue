@@ -1,5 +1,5 @@
 <template>
-    <div class="relative px-4 md:px-10">
+    <div class="relative px-4 md:px-10 py-4 md:py-10">
         <div class="py-8">
 
             <h4 class="text-3xl font-bold cursor-pointer">Browse</h4>
@@ -15,6 +15,11 @@
             p-2
             h-fit
             w-full
+            hover:shadow-lg
+            dark:hover:bg-colorPrimaryContainerDark
+            hover:bg-colorPrimaryContainerLight
+            transition-all
+            duration-300
             flex flex-col
             space-y-2
             border-[.5px]
@@ -30,13 +35,37 @@
                     Note Title
                 </h6>
             -->
+                <div class="absolute left-0 right-0 bottom-0 top-0 w-full h-full">
+
+                    <div
+                        v-Ripple
+                        class="
+                    top-0 right-0
+                    absolute
+                    z-[2]
+                        flex cursor-pointer
+                        h-[32px] w-[32px]  
+                        rounded-full
+                        bg-colorTertiaryLight
+                        text-colorOnTertiaryLight
+                        dark:bg-colorTertiaryDark
+                        dark:text-colorOnTertiaryDark
+                        "
+                    >
+                        <Icon
+                            class="m-auto pointer-events-none"
+                            name="ic:outline-push-pin"
+                            size="18px"
+                        />
+                    </div>
+                </div>
                 <p class="text-sm px-2 pt-2 opacity-90 line-clamp-6 font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quod sed nemo pariatur doloribus non ipsa
                     cupiditate itaque harum odio, voluptas possimus iusto quas amet illum magni facere? Ut, fugiat.
                 </p>
 
                 <div class="flex pl-2 items-center">
-                    <p class="text-[13px] m-auto opacity-75 font-semibold">
+                    <p class="text-[13px] m-auto opacity-75 font-bold">
                         Nov 2{{ n }}, 2023
                     </p>
                     <div class="flex-grow" />
@@ -45,7 +74,7 @@
                         class="
                         m-auto
                         flex cursor-pointer
-                        min-h-[32px] min-w-[32px]  
+                        h-[32px] w-[32px]  
                         rounded-full
                         bg-colorTertiaryLight
                         text-colorOnTertiaryLight
