@@ -4,11 +4,11 @@
 
             <h4 class="text-3xl font-bold cursor-pointer">Browse</h4>
         </div>
-        <div class="w-full grid gap-4 grid-responsive">
+        <div class="w-full grid gap-6 grid-responsive">
 
             <div
                 v-Ripple
-                v-for="(n, i) in 8"
+                v-for="(n, i) in 12"
                 id="div"
                 class="
             cursor-pointer
@@ -29,16 +29,11 @@
             rounded-lg
             border-colorOutlineLight"
             >
-                <!--
 
-                <h6 class="text-sm font-semibold">
-                    Note Title
-                </h6>
-            -->
                 <div class="absolute p-2 left-0 right-0 bottom-0 top-0 w-full h-full">
 
                     <div
-                        v-if="n == 1 || n == 8"
+                        v-if="n % 3 == 2"
                         v-Ripple
                         class="
                     top-0 right-0
@@ -61,7 +56,11 @@
                         />
                     </div>
                 </div>
-                <p class="text-sm px-2 pt-2 opacity-90 line-clamp-6 font-semibold">
+                <h6 class="text-sm px-2 font-bold">
+                    Note Title
+                </h6>
+
+                <p class="text-[13.5px] px-2 opacity-90 line-clamp-6 font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quod sed nemo pariatur doloribus non ipsa
                     cupiditate itaque harum odio, voluptas possimus iusto quas amet illum magni facere? Ut, fugiat.
                 </p>
