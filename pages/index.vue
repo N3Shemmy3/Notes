@@ -12,7 +12,7 @@
                 id="div"
                 class="
             cursor-pointer
-            px-4 py-4
+            p-2
             h-fit
             w-full
             flex flex-col
@@ -24,13 +24,43 @@
             rounded-lg
             border-colorOutlineLight"
             >
+                <!--
+
                 <h6 class="text-sm font-semibold">
                     Note Title
                 </h6>
-                <p class="text-sm line-clamp-5">
+            -->
+                <p class="text-sm px-2 pt-2 opacity-90 line-clamp-6 font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quod sed nemo pariatur doloribus non ipsa
                     cupiditate itaque harum odio, voluptas possimus iusto quas amet illum magni facere? Ut, fugiat.
                 </p>
+
+                <div class="flex pl-2 items-center">
+                    <p class="text-[13px] m-auto opacity-75 font-semibold">
+                        Nov 2{{ n }}, 2023
+                    </p>
+                    <div class="flex-grow" />
+                    <div
+                        v-Ripple
+                        class="
+                        m-auto
+                        flex cursor-pointer
+                        min-h-[32px] min-w-[32px]  
+                        rounded-full
+                        bg-colorTertiaryLight
+                        text-colorOnTertiaryLight
+                        dark:bg-colorTertiaryDark
+                        dark:text-colorOnTertiaryDark
+                        
+                        "
+                    >
+                        <Icon
+                            class="m-auto pointer-events-none"
+                            name="ic:outline-edit"
+                            size="18px"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     </div>

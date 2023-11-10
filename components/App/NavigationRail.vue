@@ -53,6 +53,11 @@ const menuItems = [
         "path": ""
     },
     {
+        "name": "Pinned",
+        "icon": "ic:outline-push-pin",
+        "path": ""
+    },
+    {
         "name": "Categories",
         "icon": "ic:outline-label",
         "path": ""
