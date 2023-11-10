@@ -35,21 +35,23 @@
                     Note Title
                 </h6>
             -->
-                <div class="absolute left-0 right-0 bottom-0 top-0 w-full h-full">
+                <div class="absolute p-2 left-0 right-0 bottom-0 top-0 w-full h-full">
 
                     <div
+                        v-if="n == 1 || n == 8"
                         v-Ripple
                         class="
                     top-0 right-0
                     absolute
+                    ml-auto
                     z-[2]
                         flex cursor-pointer
-                        h-[32px] w-[32px]  
+                        h-[30px] w-[30px]  
                         rounded-full
-                        bg-colorTertiaryLight
-                        text-colorOnTertiaryLight
-                        dark:bg-colorTertiaryDark
-                        dark:text-colorOnTertiaryDark
+                        bg-colorSecondaryLight
+                        text-colorOnSecondaryLight
+                        dark:bg-colorSecondaryDark
+                        dark:text-colorOnSecondaryDark
                         "
                     >
                         <Icon
