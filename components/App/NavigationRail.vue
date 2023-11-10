@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-fit top-0 h-full fixed border-r-[0.5px] border-opacity-30  border-r-colorOutlineDark">
+    <div class=" w-[64px] top-0 left-0 h-full fixed border-r-[0.5px] border-opacity-30  border-r-colorOutlineDark">
         <div class="flex-col h-fit mt-12">
             <h4 class="text-xl font-bold rotate-90 cursor-pointer">Notes</h4>
         </div>

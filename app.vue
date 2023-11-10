@@ -1,20 +1,14 @@
 <template>
   <App>
-    <NavigationRail class="md:visible " />
+    <NavigationRail class="md:visible" />
     <Toolbar class="md:hidden hidden" />
-    <Container>
+    <Container class="ml-[64px]">
       <NuxtPage />
     </Container>
-
   </App>
 </template>
+
 <script setup>
-
-
-function onScroll() {
-  useEvent('event:isToolbarLifted', window.scrollY > 15);
-}
-
 onMounted(() => {
   window.addEventListener('scroll', (e) => onScroll());
 })
