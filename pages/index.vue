@@ -1,24 +1,34 @@
 <template>
-    <div class="relative px-4 md:px-10 py-4 md:py-10">
+    <div class="p-4 md:p-10">
         <div class="py-8">
             <h4 class="text-3xl font-bold cursor-pointer">Browse</h4>
         </div>
-        <NotesGrid />
+        <NotesGrid
+            class="flex-grow"
+            :notes="notes"
+        />
 
     </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import Note from '~/classes/Note'
-const notes = ref < Array < Note >> ([]);
+const notes = ref<Note[]>([]);
 
-
-onMounted(() => {
+const addNote = () => {
     for (let index = 0; index < 25; index++) {
-        var note = new Note("Note Title" + index, "Note Text");
-        note.setId(index)
-        notes.push(note)
+        const note = Note.create({
+            id: notes.value.length + index,
+            title: `Title ${notes.value.length + index}`,
+            text: `Text ${notes.value.length + index}`,
+            date: Date.now(),
+            pined: false,
+        });
+        notes.value.push(note)
+        //console.log(notes.value)
     }
-
+}
+onMounted(() => {
+    addNote()
 })
 
 const options = [

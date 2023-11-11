@@ -26,7 +26,8 @@
             <div
                 v-Ripple
                 class="
-                        
+                    absolute 
+                    ml-auto
                         flex cursor-pointer
                         h-[30px] w-[30px]  
                         rounded-full
@@ -41,16 +42,16 @@
 
         </div>
         <h6 class="text-sm px-2 font-bold">
-            {{ note?.getTitle }}
+            {{ props.note?.title }}
         </h6>
 
         <p class="text-[13.5px] px-2 opacity-90 line-clamp-6 font-semibold">
-            {{ props.note?.getText }}
+            {{ props.note?.text }}
         </p>
 
         <div class="flex pl-2 items-center">
             <p class="text-[13px] m-auto opacity-75 font-bold">
-                {{ props.note?.getDate }}
+                {{ props.note?.date }}
             </p>
             <div class="flex-grow" />
             <div

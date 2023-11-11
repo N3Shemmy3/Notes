@@ -1,14 +1,15 @@
 <template>
   <App>
     <NavigationRail class="md:visible" />
-    <Toolbar class="md:hidden hidden" />
-    <Container class="ml-[64px]">
+    <Container class="pl-[64px]">
       <NuxtPage />
     </Container>
   </App>
 </template>
 
-<script setup>
+<script setup lang="ts">
+function onScroll() {
+}
 onMounted(() => {
   window.addEventListener('scroll', (e) => onScroll());
 })
