@@ -1,7 +1,6 @@
 <template>
     <div class="relative px-4 md:px-10 py-4 md:py-10">
         <div class="py-8">
-
             <h4 class="text-3xl font-bold cursor-pointer">Browse</h4>
         </div>
         <div class="w-full grid gap-6 grid-responsive">
@@ -11,50 +10,49 @@
                 v-for="(n, i) in 12"
                 id="div"
                 class="
-            cursor-pointer
-            p-2
-            h-fit
-            w-full
-            hover:shadow-lg
-            dark:hover:bg-colorPrimaryContainerDark
-            hover:bg-colorPrimaryContainerLight
-            transition-all
-            duration-300
-            flex flex-col
-            space-y-2
-            border-[.5px]
-            border-opacity-20
-            bg-colorSecondaryContainerLight dark:bg-colorSecondaryContainerDark
-            text-colorOnSecondaryContainerLight dark:text-colorOnSecondaryLight
-            rounded-lg
-            border-colorOutlineLight"
+                cursor-pointer
+                p-2
+                h-fit
+                w-full
+                hover:shadow-lg
+                dark:hover:bg-colorPrimaryContainerDark
+                hover:bg-colorPrimaryContainerLight
+                transition-all
+                duration-300
+                flex flex-col
+                space-y-2
+                border-[.5px]
+                border-opacity-20
+                bg-colorSecondaryContainerLight dark:bg-colorSecondaryContainerDark
+                text-colorOnSecondaryContainerLight dark:text-colorOnSecondaryLight
+                rounded-lg
+                border-colorOutlineLight"
             >
 
-                <div class="absolute p-2 left-0 right-0 bottom-0 top-0 w-full h-full">
-
-                    <div
-                        v-if="n % 3 == 2"
-                        v-Ripple
-                        class="
-                    top-0 right-0
-                    absolute
-                    ml-auto
-                    z-[2]
+                <div class="absolute py-2 left-0 right-0 bottom-0 top-0 w-full h-full">
+                    <UDropdown
+                        :items="items"
+                        :popper="{ placement: 'bottom-start' }"
+                    >
+                        <div
+                            v-Ripple
+                            class="
+                        top-0 right-0
+                        absolute
+                        ml-auto
+                        z-[2]
                         flex cursor-pointer
                         h-[30px] w-[30px]  
                         rounded-full
-                        bg-colorSecondaryLight
-                        text-colorOnSecondaryLight
-                        dark:bg-colorSecondaryDark
-                        dark:text-colorOnSecondaryDark
                         "
-                    >
-                        <Icon
-                            class="m-auto pointer-events-none"
-                            name="ic:outline-push-pin"
-                            size="18px"
-                        />
-                    </div>
+                        >
+                            <Icon
+                                class="m-auto pointer-events-none"
+                                name="ic:outline-more-vert"
+                                size="22px"
+                            />
+                        </div>
+                    </UDropdown>
                 </div>
                 <h6 class="text-sm px-2 font-bold">
                     Note Title
@@ -72,6 +70,7 @@
                     <div class="flex-grow" />
                     <div
                         v-Ripple
+                        v-if="false"
                         class="
                         m-auto
                         flex cursor-pointer
@@ -95,6 +94,37 @@
         </div>
     </div>
 </template>
+<script setup>
+const items = [
+    [{
+        label: 'Profile',
+        avatar: {
+            src: 'https://avatars.githubusercontent.com/u/739984?v=4'
+        }
+    }], [{
+        label: 'Edit',
+        icon: 'i-heroicons-pencil-square-20-solid',
+        shortcuts: ['E'],
+        click: () => {
+            console.log('Edit')
+        }
+    }, {
+        label: 'Duplicate',
+        icon: 'i-heroicons-document-duplicate-20-solid',
+        shortcuts: ['D'],
+        disabled: true
+    }], [{
+        label: 'Archive',
+        icon: 'i-heroicons-archive-box-20-solid'
+    }, {
+        label: 'Move',
+        icon: 'i-heroicons-arrow-right-circle-20-solid'
+    }], [{
+        label: 'Delete',
+        icon: 'i-heroicons-trash-20-solid',
+        shortcuts: ['⌘', 'D']
+    }]
+</script>
 
 <style scoped>
 .grid-responsive {
