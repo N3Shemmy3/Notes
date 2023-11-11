@@ -30,13 +30,10 @@
             >
 
                 <div class="absolute py-2 left-0 right-0 bottom-0 top-0 w-full h-full">
-                    <UDropdown
-                        :items="items"
-                        :popper="{ placement: 'bottom-start' }"
-                    >
-                        <div
-                            v-Ripple
-                            class="
+
+                    <div
+                        v-Ripple
+                        class="
                         top-0 right-0
                         absolute
                         ml-auto
@@ -45,14 +42,13 @@
                         h-[30px] w-[30px]  
                         rounded-full
                         "
-                        >
-                            <Icon
-                                class="m-auto pointer-events-none"
-                                name="ic:outline-more-vert"
-                                size="22px"
-                            />
-                        </div>
-                    </UDropdown>
+                    >
+                        <Icon
+                            class="m-auto pointer-events-none"
+                            name="ic:outline-more-vert"
+                            size="22px"
+                        />
+                    </div>
                 </div>
                 <h6 class="text-sm px-2 font-bold">
                     Note Title
