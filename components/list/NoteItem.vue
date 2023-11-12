@@ -21,25 +21,17 @@
                 border-colorOutlineLight"
     >
 
-        <div class="absolute py-2 left-0 right-0 bottom-0 top-0 w-full h-full">
-
-            <div
-                v-Ripple
-                class="
-                    absolute 
-                    ml-auto
-                        flex cursor-pointer
-                        h-[30px] w-[30px]  
-                        rounded-full
-                        "
-            >
-                <Icon
-                    class="m-auto pointer-events-none"
-                    name="ic:outline-more-vert"
-                    size="22px"
-                />
-            </div>
-
+        <div class="absolute flex py-2 left-0 right-0 bottom-0 top-0 w-full h-full">
+            <DropDown class="ml-auto">
+                <template #toggler>
+                    <IconButton icon="ic:outline-more-vert" />
+                </template>
+                <DropDownContent>
+                    <DropDownItem>Action 1</DropDownItem>
+                    <DropDownItem>Action 2</DropDownItem>
+                    <DropDownItem>Action 3</DropDownItem>
+                </DropdownContent>
+            </DropDown>
         </div>
         <h6 class="text-sm px-2 font-bold">
             {{ props.note?.title }}
@@ -51,7 +43,7 @@
 
         <div class="flex pl-2 items-center">
             <p class="text-[13px] m-auto opacity-75 font-bold">
-                {{ props.note?.date }}
+                {{ date?.getTime }}
             </p>
             <div class="flex-grow" />
             <div
@@ -81,5 +73,9 @@
 import Note from "../../classes/Note";
 const props = defineProps({
     note: Note,
-}) 
+})
+const date = ref<Date>()
+onMounted(() => {
+    date.value?.setDate(props.note?.date!)
+})
 </script>

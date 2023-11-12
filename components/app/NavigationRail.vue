@@ -25,23 +25,11 @@
                 />
             </div>
         </div>
-        <div class="flex flex-col w-full py-[16px] space-y-2 absolute bottom-0">
-            <div
+        <div class="flex flex-col w-full py-[16px] space-y-4 absolute bottom-0">
+            <IconButton
                 v-for="n in menuItems"
-                v-Ripple
-                class="
-                        m-auto
-                        flex cursor-pointer
-                        min-h-[48px] min-w-[48px]  
-                        rounded-full
-                        "
-            >
-                <Icon
-                    class="m-auto pointer-events-none"
-                    :name="n.icon"
-                    size="24px"
-                />
-            </div>
+                :icon="n.icon"
+            />
         </div>
     </div>
 </template>
