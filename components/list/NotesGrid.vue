@@ -5,9 +5,9 @@
         class="grid gap-4 grid-responsive"
     >
         <NoteItem
-            v-for="note in props.notes"
+            v-for="(note, index) in props.notes"
             :note="note"
-            :key="note.id"
+            :key="index"
         />
     </TransitionGroup>
 </template>
@@ -41,23 +41,17 @@ function isTablet() {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
 
-/** 1. declare transition */
-.fade-move,
-.fade-enter-active,
-.fade-leave-active {
-    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+fade-enter-active,
+fade-leave-active {
+    transition: all 1s;
 }
 
-/* 2. declare enter from and leave to state */
-.fade-enter-from,
-.fade-leave-to {
+fade-enter,
+.fade-leave-to
+
+/* .list-leave-active below version 2.1.8 */
+    {
     opacity: 0;
-    transform: scaleY(0.01) translate(30px, 0);
-}
-
-/* 3. ensure leaving items are taken out of layout flow so that moving
-      animations can be calculated correctly. */
-.fade-leave-active {
-    position: absolute;
+    transform: translateY(30px);
 }
 </style>

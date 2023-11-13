@@ -11,6 +11,7 @@
 
             <div
                 v-Ripple
+                @click="onClickActionButton"
                 class="
                         m-auto
                         flex cursor-pointer
@@ -33,22 +34,26 @@
             <IconButton
                 v-for="n in menuItems"
                 class="w-10 h-10"
+                size="22px"
                 :icon="n.icon"
             />
         </div>
     </div>
 </template>
 <script setup>
+import Note from '~/classes/Note';
+import useNotesStore from '~/stores/useNotesStore';
 const menuItems = [
 
     {
-        "name": "Pinned",
-        "icon": "ic:outline-push-pin",
+        "name": "Search",
+        "icon": "ic:outline-search",
         "path": ""
     },
+
     {
-        "name": "Categories",
-        "icon": "ic:outline-label",
+        "name": "Trash",
+        "icon": "ic:outline-delete",
         "path": ""
     },
     {
@@ -56,7 +61,25 @@ const menuItems = [
         "icon": "ic:outline-settings",
         "path": ""
     },
+    {
+        "name": "About & Feedback",
+        "icon": "ic:outline-info",
+        "path": ""
+    },
 ]
-
 const emit = defineEmits(["onClickMenuItem", "name"]);
+const notesStore = useNotesStore()
+
+function onClickActionButton() {
+    notesStore.addNote(
+        new Note(
+            notesStore.notesList.value,
+            `Title ${notesStore.getLength}`,
+            `Basically, what I need is a computed property that returns true when the window.innerwidth is equal or lower than 768px and false when it's higher than 768px.What I did:`,
+            Date.now(),
+            false,
+        )
+    );
+
+}
 </script>
