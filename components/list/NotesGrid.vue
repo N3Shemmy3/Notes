@@ -4,8 +4,6 @@
         name="fade"
         class="grid gap-4 grid-responsive"
     >
-
-
         <NoteItem
             v-for="note in props.notes"
             :note="note"
@@ -54,7 +52,6 @@ function isTablet() {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-    animation-delay: 200ms;
     transform: scaleY(0.01) translate(30px, 0);
 }
 

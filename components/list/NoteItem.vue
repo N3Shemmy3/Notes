@@ -2,23 +2,26 @@
     <li
         v-Ripple
         class="
-                cursor-pointer
-                p-2
-                h-fit
-                w-full
-                hover:shadow-lg
-                dark:hover:bg-colorPrimaryContainerDark
-                hover:bg-colorPrimaryContainerLight
-                transition-all
-                duration-300
-                flex flex-col
-                space-y-2
-                border-[.5px]
-                border-opacity-20
-                bg-colorSecondaryContainerLight dark:bg-colorSecondaryContainerDark
-                text-colorOnSecondaryContainerLight dark:text-colorOnSecondaryLight
-                rounded-lg
-                border-colorOutlineLight"
+        cursor-pointer
+        p-2
+        h-fit
+        w-full
+        hover:shadow-lg
+        dark:hover:bg-colorPrimaryContainerDark
+        hover:bg-colorPrimaryContainerLight
+        transition-all
+        duration-300
+        flex
+        flex-col
+        space-y-2
+        border-[.5px]
+        border-opacity-20
+        bg-colorSecondaryContainerLight
+        dark:bg-colorSecondaryContainerDark
+        text-colorOnSecondaryContainerLight
+        dark:text-colorOnSecondaryLight
+        rounded-lg
+        border-colorOutlineLight"
     >
 
         <div class="absolute flex py-2 left-0 right-0 bottom-0 top-0 w-full h-full">
@@ -79,3 +82,24 @@ onMounted(() => {
     date.value?.setDate(props.note?.date!)
 })
 </script>
+<style scoped>
+/** 1. declare transition */
+.fade-move,
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+/* 2. declare enter from and leave to state */
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+    transform: scaleY(0.01) translate(30px, 0);
+}
+
+/* 3. ensure leaving items are taken out of layout flow so that moving
+      animations can be calculated correctly. */
+.fade-leave-active {
+    position: absolute;
+}
+</style>

@@ -3,7 +3,7 @@
 		ref="button"
 		v-if="icon"
 		v-Ripple
-		class="flex cursor-pointer outline-none noSelect p-1 rounded-full bg-transparent"
+		class="flex cursor-pointer outline-none noSelect p-2 rounded-full bg-transparent"
 	>
 		<Icon
 			v-Ripple
