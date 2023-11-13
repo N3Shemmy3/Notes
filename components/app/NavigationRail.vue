@@ -40,11 +40,7 @@
 </template>
 <script setup>
 const menuItems = [
-    {
-        "name": "Search",
-        "icon": "ic:outline-search",
-        "path": ""
-    },
+
     {
         "name": "Pinned",
         "icon": "ic:outline-push-pin",
@@ -61,4 +57,6 @@ const menuItems = [
         "path": ""
     },
 ]
+
+const emit = defineEmits(["onClickMenuItem", "name"]);
 </script>

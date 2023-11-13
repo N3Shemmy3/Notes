@@ -1,6 +1,6 @@
 <template>
   <App>
-    <NavigationRail class="md:visible" />
+    <NavigationRail @onClickMenuItem="name =>" />
     <Container class="pl-[64px]">
       <NuxtPage />
     </Container>
