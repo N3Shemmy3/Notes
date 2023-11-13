@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/png",
-          href: "https://api.iconify.design/ph:terminal-window.svg?color=%23888888",
+          href: "https://api.iconify.design/ic:outline-note-add.svg?color=%23888888",
         },
       ],
     },
@@ -20,10 +20,15 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+
+  alias: {
+    pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
+  },
+
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
-    '@pinia/nuxt',
+    '@pinia/nuxt'
   ],
 
   plugins: [
