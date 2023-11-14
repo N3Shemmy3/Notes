@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
+    "@vueuse/nuxt": "^10.6.1",
+    "localforage": "^1.10.0",
     "mitt": "^3.0.1",
     "vuex": "^4.0.2"
   }

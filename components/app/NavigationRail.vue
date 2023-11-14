@@ -74,7 +74,7 @@ function onClickActionButton() {
     notesStore.addNote(
         new Note(
             notesStore.notesList.value,
-            `Title ${notesStore.getLength}`,
+            `Title ${notesStore.getLength()}`,
             `Basically, what I need is a computed property that returns true when the window.innerwidth is equal or lower than 768px and false when it's higher than 768px.What I did:`,
             Date.now(),
             false,

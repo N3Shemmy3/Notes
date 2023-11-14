@@ -1,7 +1,7 @@
 <template>
     <TransitionGroup
         tag="ul"
-        name="fade"
+        name="note"
         class="grid gap-4 grid-responsive"
     >
         <NoteItem
@@ -41,17 +41,22 @@ function isTablet() {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
 
-fade-enter-active,
-fade-leave-active {
-    transition: all 1s;
+.note-move,
+/* apply transition to moving elements */
+.note-enter-active,
+.note-leave-active {
+    transition: all 0.5s ease;
 }
 
-fade-enter,
-.fade-leave-to
-
-/* .list-leave-active below version 2.1.8 */
-    {
+.note-enter-from,
+.note-leave-to {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.note-leave-active {
+    position: absolute;
 }
 </style>

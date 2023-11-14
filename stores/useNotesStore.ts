@@ -1,13 +1,32 @@
 import Note from "~/classes/Note";
+import { watch } from "vue";
+import localforage from 'localforage';
 
-const useNotesStore = defineStore('notesList', () => {
+const storeKey = "notesStore"
+
+const useNotesStore = defineStore(storeKey, async () => {
     const notesList = ref<Note[]>([]);
+
+    if (await localforage.getItem(storeKey)) {
+        const storedNotes = await localforage.getItem("notesStore");
+        notesList.value = storedNotes ? (storedNotes as Note[]) : [];
+    }
+    watch(
+        notesList,
+        (notes) => {
+            localforage.setItem(storeKey, JSON.stringify(notes));
+        },
+        { deep: true }
+    );
 
     function addNote(note: Note) {
         notesList.value.push(note);
     }
     function removeNote(note: Note) {
-        notesList.value.push(note);
+        const index = notesList.value.indexOf(note);
+        if (index !== -1) {
+            notesList.value.splice(index, 1);
+        }
     }
 
     function getNote(id: number) {
@@ -18,8 +37,8 @@ const useNotesStore = defineStore('notesList', () => {
     }
 
     function getLength() {
-        if (!notesList.value) return 0;
-        return notesList.value.length;
+        var length = notesList.value.length;
+        return length > 0 ? length : 0;
     }
 
     /**
@@ -37,8 +56,14 @@ const useNotesStore = defineStore('notesList', () => {
             //console.log(notes.value)
         }
     }
-    
+     
     */
-    return { notesList, addNote, getNote, removeNote, }
+    return {
+        notesList,
+        addNote,
+        getNote,
+        removeNote,
+        getLength,
+    }
 });
 export default useNotesStore;

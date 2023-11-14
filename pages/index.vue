@@ -9,7 +9,6 @@
     </div>
 </template>
 <script setup lang="ts">
-import Note from '~/classes/Note'
 import useNotesStore from '~/stores/useNotesStore';
 
 const notesStore = useNotesStore()
