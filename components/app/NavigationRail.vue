@@ -9,9 +9,10 @@
         </div>
         <div class="flex flex-col mt-12">
 
-            <div
+            <button
                 v-Ripple
                 @click="onClickActionButton"
+                :aria-label="createNote"
                 class="
                         m-auto
                         flex cursor-pointer
@@ -28,13 +29,14 @@
                     name="mdi:plus"
                     size="24px"
                 />
-            </div>
+            </button>
         </div>
         <div class="flex flex-col w-full py-[16px] space-y-2 absolute bottom-0 items-center">
             <IconButton
                 v-for="n in menuItems"
                 class="w-10 h-10"
                 size="22px"
+                :name="n.name"
                 :icon="n.icon"
             />
         </div>

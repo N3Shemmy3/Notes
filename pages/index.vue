@@ -1,7 +1,9 @@
 <template>
     <div class="p-4 md:p-10">
         <div class="py-8">
-            <h4 class="text-3xl font-bold cursor-pointer">Browse</h4>
+            <h6 class="text-3xl
+                font-bold
+                cursor-pointer">Browse</h6>
         </div>
 
         <NotesGrid :notes="notesList" />
