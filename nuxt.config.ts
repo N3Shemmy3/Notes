@@ -21,15 +21,13 @@ export default defineNuxtConfig({
     },
   ],
 
-  alias: {
-    pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
-  },
+
 
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
     '@pinia/nuxt',
-    '@vueuse/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
   ],
 
   plugins: [
@@ -38,6 +36,7 @@ export default defineNuxtConfig({
 
   css: [
     "@/assets/css/tailwind.css",
+    "@/assets/css/fontstyles.css",
     "@/assets/fonts/Montserrat.css",
     "@/assets/fonts/MajorMonoDisplay.css"
   ],
