@@ -33,7 +33,7 @@ const useNotesStore = defineStore("notesList", () => {
     }
 },
     {
-        persist: true
+        persist: false
     },
 
 );
