@@ -1,6 +1,6 @@
 #Notes App
 
-the purpose of this project was to just experiment with css animations and not really to make it fully featured 
+The purpose of this project was to just experiment with css animations and not really to make it fully featured 
 
 
 ### Nuxt 3 Minimal Starter
